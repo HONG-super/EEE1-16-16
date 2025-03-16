@@ -1,0 +1,55 @@
+        MOV     R0, #0xB3
+        LSL     R0, R0, #8
+        LSR     R0, R0, #8
+        SUB     R7, R7, R7
+        MOV     R7, #0xA7
+        LSL     R7, R7, #8
+        ADD     R0, R7
+        AND     R7, #0
+
+        MOV     R1, #0x6C
+        LSL     R1, R1, #8
+        LSR     R1, R1, #8
+        SUB     R7, R7, R7
+        MOV     R7, #0x88
+        LSL     R7, R7, #8
+        ADD     R1, R7
+        AND     R7, #0
+
+        LSL     R2, R1, #8
+        NOP
+        LSR     R2, R2, #8
+        LSR     R3, R1, #8
+        LSR     R1, R0, #8
+        LSL     R0, R0, #8
+        LSR     R0, R0, #8
+
+        MOV     R7, R0
+        ADD     R7, #0
+        MOVC1   R7, R2
+        MOV     R4, R0
+        MOVC1   R4, R3
+        MOV     R5, R4
+        LSL     R4, R4, #8
+        ADD     R7, R4
+        ADC     R6, #0
+        LSR     R5, R5, #8
+        ADD     R6, R5
+
+        ADD     R6,#0
+        MOV     R4, R1
+        MOVC1   R4, R2
+        MOV     R5, R4
+        LSL     R4, R4, #8
+        ADD     R7, R4
+        ADC     R6, #0
+        LSR     R5, R5, #8
+        ADD     R6, R5
+
+        LSL     R6, R6, #0
+        MOV     R4, R1
+        MOV     R5, R3
+        MOVC1   R4, R5
+        ADD     R6, R4
+
+
